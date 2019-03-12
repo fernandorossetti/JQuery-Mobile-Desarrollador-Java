@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width = device-width, initial-scale=1"  charset="utf-8" />
+  <title>Evaluación Final - jQuery Mobile</title>
+  <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/jquery.mobile-1.4.5.js"></script>
+  <script type="text/javascript" src="js/javascript.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjve5vaLJohiHU3hjrNfTf52HdBmDKmzI"></script> 
+
+</head>
+<body>
+
+  <div data-role="page" id="paginaInicio">
+    <div data-role="header">
+      <h2>Gestión Hotel</h2>
+    </div>
+    <div data-role="content">
+      <a id="btnRegistrar" data-role="button">Registrar Hotel</a>
+      <a id="btnListar" data-role="button">Lista Hoteles</a>
+    </div>
+    <div data-role="footer">
+      <h2>Gestión Hotel</h2>
+    </div>
+  </div>
+  
+  <div data-role="page" id="paginaRegistro">
+    <div data-role="header">
+      <h2>Registro de Hotel</h2>
+    </div>
+    <div data-role="content">
+      <label for="txtNombre">Nombre:</label>
+      <input type="text" id="txtNombre" name="txtNombre"  required placeholder="Escriba el nombre del hotel.">
+      <hr />
+      <label>Ubicación:</label>
+      <div id="divMap">
+      
+      </div>
+      <label for="txtCiudad">Ciudad:</label>
+      <input type="text" id="txtCiudad" name="txtCiudad" required placeholder="Escriba la ciudad del hotel.">
+      <hr />
+      <label for="txtTelefono">Teléfono:</label>
+      <input type="text" id="txtTelefono" name="txtTelefono" placeholder="Escriba teléfono del hotel.">
+      <hr/>
+      <label for="txtEstrellas">Estrellas:</label>
+      <input type="number" id="txtEstrellas" name="txtEstrellas"  required min="1" max="5" placeholder="Escriba # de estrellas.">
+      <hr/>   
+      <a id="btnRegistrarHotel" data-role="button">Registrar Hotel</a>
+      <a id="btnVolver" data-role="button">Volver</a>
+    </div>
+    <div data-role="footer"></div>
+  </div>
+  
+  <div data-role="page" id="paginaLista">
+    <div data-role="header">
+      <h2>Lista Hoteles</h2>
+    </div>
+    <div data-role="content">
+      <ul data-role="listview" id="ulHoteles">
+      </ul>
+    </div>
+    <a id="btnVolver1" data-role="button">Volver</a>
+  </div>
+  
+  <div data-role="page" id="paginaListaHoteles">
+    <div data-role="header">
+      <h2>Datos Hotel</h2>
+    </div>
+    <div data-role="content">
+      <strong>Nombre:</strong>&nbsp;<span id="lblNombre">[nombre]</span><br />
+      <strong>Ciudad:</strong>&nbsp;<span id="lblCiudad">[ciudad]</span><br />
+      <strong>Teléfono:</strong>&nbsp;<span id="lblTelefono">[telefono]</span><br />
+      <strong>Estrellas:</strong>&nbsp;<span id="lblEstrellas">[estrellas]</span><br />
+      <strong>Ubicación:</strong>
+      <div id="divMap2">
+      
+      </div>
+      <a id="btnListar1" data-role="button">Lista Hoteles</a>
+    </div>
+  </div>
+
+</body>
+</html>
